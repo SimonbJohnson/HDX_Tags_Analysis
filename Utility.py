@@ -378,7 +378,7 @@ def cosine_distance ( input ,target_list, model, index2word_set, num) :
  #   print("tag: ", tag_list[i])
 
 
-####if i want to do tag expansion
+####if i want to do tag expansion using wordnet
 from nltk.corpus import wordnet as wn
 def tag_expansion_wordnet(df_tags):
     df_tags['tag_expansion'] = ""
