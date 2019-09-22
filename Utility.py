@@ -60,7 +60,7 @@ def find_topic(df_topic_keywords, text, vectorizer, best_lda_model):
 
 def get_model():
     # Load Google's pre-trained Word2Vec model.
-    model =gensim.models.KeyedVectors.load_word2vec_format('/Users/dewet/Downloads/GoogleNews-vectors-negative300.bin', binary=True)  
+    model =gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)  
     words = list(model.wv.vocab)
     return model,words
 
@@ -225,7 +225,7 @@ def clean_tag(tag_list):
 import gensim
 def get_model():
     # Load Google's pre-trained Word2Vec model.
-    model =gensim.models.KeyedVectors.load_word2vec_format('/Users/dewet/Downloads/GoogleNews-vectors-negative300.bin', binary=True)  
+    model =gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)  
     words = list(model.wv.vocab)
     return model,words
 
@@ -236,7 +236,7 @@ def get_model():
 def read_concept_tags():
     #file = open('/Users/dewet/Downloads/hdx-work/tag_list.txt', 'r')
     #print(file.read())
-    lineList = [line.rstrip('\n') for line in open('/Users/dewet/Downloads/hdx-work/tag_list.txt', 'r')]
+    lineList = [line.rstrip('\n') for line in open('tag_list.txt', 'r')]
     #print(lineList)
     #tag_list = file.read()
     return lineList
